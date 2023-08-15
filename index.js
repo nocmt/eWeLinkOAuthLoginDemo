@@ -2,6 +2,7 @@ import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import Router from 'koa-router'
 import { client, redirectUrl, randomString } from './config.js'
+import * as fs from 'fs'
 
 const app = new Koa()
 
@@ -28,7 +29,10 @@ router.get('/redirectUrl', async (ctx) => {
     redirectUrl,
     code,
   })
+
   // You can write your own business here
+  res['region'] = region
+  fs.writeFileSync('./token.json', JSON.stringify(res))
   ctx.body = res
 })
 

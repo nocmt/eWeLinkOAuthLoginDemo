@@ -5,13 +5,19 @@ import eWeLink from 'ewelink-api-next'
 // Apply to become a developer
 // Create an application
 
-export const client = new eWeLink.WebAPI({
+const _config = {
   appId: '', // App ID, which needs to be configured in the eWeLink open platform
   appSecret: '', // App Secret, which needs to be configured in the eWeLink open platform
   region: 'eu', //Feel free, it will be automatically updated after login
   requestRecord: true, // Request record, default is false
   // logObj: console, // Log object, default is console
-})
+}
+
+if (!_config.appId || !_config.appSecret) {
+  throw new Error('Please configure appId and appSecret')
+}
+
+export const client = new eWeLink.WebAPI(_config)
 
 export const redirectUrl = 'http://127.0.0.1:8000/redirectUrl' // Redirect URL, which needs to be configured in the eWeLeLink open platform
 

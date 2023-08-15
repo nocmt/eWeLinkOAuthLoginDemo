@@ -20,3 +20,9 @@ npm run start
 ```
 Login URL: http://127.0.0.1:8000/login
 ```
+
+5. control Devices Example:
+
+```
+node controlDeviceDemo.js
+```
