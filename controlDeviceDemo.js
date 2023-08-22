@@ -23,13 +23,27 @@ const controlDeviceDemo = async () => {
       thingList = thingList.data.thingList
       console.log(thingList)
       // Control the first single channel device, just an example
-
       if (thingList[0]?.itemData.extra.uiid === 1) {
         await client.device.setThingStatus({
           type: 1,
           id: thingList[0].itemData.deviceid,
           params: {
             switch: 'on', // Specific control instructions: https://coolkit-technologies.github.io/eWeLink-API/#/en/UIIDProtocol
+          },
+        })
+      }
+      // Control the first dual channel device, just an example
+      if (thingList[0]?.itemData.extra.uiid === 4) {
+        await client.device.setThingStatus({
+          type: 1,
+          id: thingList[0].itemData.deviceid,
+          params: {
+            switches: [
+              { switch: 'off', outlet: 0 },
+              { switch: 'off', outlet: 1 },
+              { switch: 'off', outlet: 2 },
+              { switch: 'off', outlet: 3 },
+            ],
           },
         })
       }
