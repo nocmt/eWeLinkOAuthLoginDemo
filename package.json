@@ -12,7 +12,7 @@
   "author": "carl",
   "license": "ISC",
   "dependencies": {
-    "ewelink-api-next": "^0.0.8",
+    "ewelink-api-next": "^1.0.1",
     "koa": "^2.14.2",
     "koa-bodyparser": "^3.2.0",
     "koa-router": "^12.0.0"
