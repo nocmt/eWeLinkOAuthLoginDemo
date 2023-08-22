@@ -2,7 +2,7 @@
 
 ### 1. Login/Register
 
-Vist https://dev.ewelink.cc/eWelink you need to login/register for an eWelink account to access the eWelink Developer Platform. You can click 'Get started' or 'Login/Register' button on the page, if you don't have an eWelink account click Create account to register and login, if you have an existing eWelink account enter your account password to login.
+Vist https://dev.ewelink.cc/ you need to login/register for an eWelink account to access the eWelink Developer Platform. You can click 'Get started' or 'Login/Register' button on the page, if you don't have an eWelink account click Create account to register and login, if you have an existing eWelink account enter your account password to login.
 
 ![home](./imgs/home.png)
 
