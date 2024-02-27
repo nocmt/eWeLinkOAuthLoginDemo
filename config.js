@@ -18,16 +18,12 @@ if (!_config.appId || !_config.appSecret) {
 }
 
 export const client = new eWeLink.WebAPI(_config)
+export const wsClient = new eWeLink.Ws(_config);
 
 export const redirectUrl = 'http://127.0.0.1:8000/redirectUrl' // Redirect URL, which needs to be configured in the eWeLeLink open platform
 
 // Generate random strings
 export const randomString = (length) => {
-  const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  const maxPos = chars.length
-  let pwd = ''
-  for (let i = 0; i < length; i++) {
-    pwd += chars.charAt(Math.floor(Math.random() * maxPos))
-  }
-  return pwd
+  return [...Array(length)].map(_=>(Math.random()*36|0).toString(36)).join('');
 }
+
