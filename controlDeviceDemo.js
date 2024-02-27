@@ -85,8 +85,8 @@ const controlDeviceDemo = async () => {
       }
     }
   } catch (e) {
-    console.log(e)
+    console.error(e)
   }
 }
 
-controlDeviceDemo()
+controlDeviceDemo().then(()=>{})
