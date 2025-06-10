@@ -131,3 +131,4 @@ dist
 
 token.json
 .DS_Store
+.idea
